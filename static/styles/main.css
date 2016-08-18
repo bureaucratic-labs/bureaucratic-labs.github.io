@@ -27,6 +27,7 @@ h1.brand {
 }
 
 div.header {
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,9 +37,10 @@ div.header {
 }
 
 div.content {
+    min-height: 80vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 
 div.project {
@@ -52,4 +54,11 @@ div.project > div.title {
 div.project > div.cover > img {
     width: 20vw;
     border-radius: 15vw;
+}
+
+div.footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
