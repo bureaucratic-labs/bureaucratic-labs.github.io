@@ -1,0 +1,55 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+span.red {
+    color: #ff0000;
+}
+
+h1.brand {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+div.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+div.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.project {
+    width: 30vw;
+    text-align: center;
+}
+
+div.project > div.title {
+}
+
+div.project > div.cover > img {
+    width: 20vw;
+    border-radius: 15vw;
+}
