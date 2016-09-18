@@ -1,5 +1,5 @@
 (function() {
-    var NatashaEndpoint = 'http://natasha-playground.herokuapp.com/api/extract';
+    var NatashaEndpoint = 'https://natasha-playground.herokuapp.com/api/extract';
     var GrammarsClasses = {
         Person: 'person',
         Organisation: 'org',
