@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="/static/styles/main.css">
+    <title>Bureaucratic Labs / Natasha</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="brand">
+            <span class="red">{</span>
+            <span>ъ</span>
+            <span class="red">}</span>
+        </h1>
+        <nav>
+            <a href="/">Bureaucratic Labs</a>
+            <span>/</span>
+            <a href="https://github.com/bureaucratic-labs">GitHub</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="panel">
+            <form class="pure-form pure-form-stacked">
+                <textarea id="text">Так говорила в июле 1805 года известная Анна Павловна Шерер, фрейлина и приближенная императрицы Марии Феодоровны, встречая важного и чиновного князя Василия, первого приехавшего на ее вечер. Анна Павловна кашляла несколько дней, у нее был грипп, как она говорила (грипп был тогда новое слово, употреблявшееся только редкими).</textarea>
+                <button type="submit" class="pure-button pure-button-primary">Начать Анализ</button>
+            </form>
+        </div>
+        <div class="panel">
+            <p id="result">Так говорила в <span class="date">июле</span> <span class="date">1805 года</span> известная <span class="person"><span class="person"><span class="person">Анна Павловна</span></span> Шерер</span>, фрейлина и приближенная императрицы <span class="person">Марии Феодоровны</span>, встречая важного и чиновного князя Василия, первого приехавшего на ее вечер. <span class="person">Анна Павловна</span> кашляла несколько дней, у нее был грипп, как она говорила (грипп был тогда новое слово, употреблявшееся только редкими).</p>
+            <ul class="legend">
+                <li><span class="person"></span>Физ. лица</li>
+                <li><span class="org"></span>Организации</li>
+                <li><span class="event"></span>События</li>
+                <li><span class="geo"></span>Гео-объекты</li>
+                <li><span class="date"></span>Объекты времени</li>
+                <li><span class="money"></span>Денежные единицы</li>
+                <li><span class="brand"></span>Бренды</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Изображения предоставлены <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></p>
+    </div>
+    <script type="text/javascript" src="/static/scripts/playground.js"></script>
+</body>
+</html>
