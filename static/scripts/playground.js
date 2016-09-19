@@ -12,8 +12,10 @@
     var form = document.forms[0].addEventListener('submit', function(e) {
         e.preventDefault();
         var request = new XMLHttpRequest(),
-            text = this.text.value
+            text = this.text.value,
+            button = this.start,
             offset = 0;
+        button.className = button.className.replace('pure-button-primary', 'pure-button-disabled');
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
                 var matches = JSON.parse(request.responseText),
@@ -31,10 +33,11 @@
                     text = text.replace(original, '<span class="' + GrammarsClasses[grammar] + '">' + original + '</span>');
                 };
                 document.getElementById("result").innerHTML = text;
-            }
+                button.className = button.className.replace('pure-button-disabled', 'pure-button-primary');
+            };
         };
         request.open("POST", NatashaEndpoint, true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.send("text=" + text);
     });
-        })();
+})();
