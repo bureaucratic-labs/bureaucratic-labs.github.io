@@ -13,8 +13,7 @@
         e.preventDefault();
         var request = new XMLHttpRequest(),
             text = this.text.value,
-            button = this.start,
-            offset = 0;
+            button = this.start;
         button.className = button.className.replace('pure-button-primary', 'pure-button-disabled');
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
@@ -28,9 +27,10 @@
                     originals.push([grammar, original, position]);
                 };
                 for (var i = originals.length - 1; i >= 0; i--) {
-                    var original = originals[i][1],
-                        grammar = originals[i][0];
-                    text = text.replace(original, '<span class="' + GrammarsClasses[grammar] + '">' + original + '</span>');
+                    var grammar = originals[i][0],
+                        original = originals[i][1],
+                        position = originals[i][2];
+                    text = text.split(original).join('<span class="' + GrammarsClasses[grammar] + '">' + original + '</span>');
                 };
                 document.getElementById("result").innerHTML = text;
                 button.className = button.className.replace('pure-button-disabled', 'pure-button-primary');
