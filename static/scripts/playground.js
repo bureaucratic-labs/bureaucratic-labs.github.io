@@ -1,4 +1,16 @@
 (function() {
+
+    String.prototype.escape = function() {
+        var tagsToReplace = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;'
+        };
+        return this.replace(/[&<>]/g, function(tag) {
+            return tagsToReplace[tag] || tag;
+        });
+    };
+
     var NatashaEndpoint = 'https://natasha-playground.herokuapp.com/api/extract';
     var GrammarsClasses = {
         Person: 'person',
@@ -12,7 +24,7 @@
     var form = document.forms[0].addEventListener('submit', function(e) {
         e.preventDefault();
         var request = new XMLHttpRequest(),
-            text = this.text.value,
+            text = this.text.value.escape(),
             button = this.start;
         button.className = button.className.replace('pure-button-primary', 'pure-button-disabled');
         request.onreadystatechange = function() {
@@ -32,6 +44,7 @@
                         position = originals[i][2];
                     text = text.split(original).join('<span class="' + GrammarsClasses[grammar] + '">' + original + '</span>');
                 };
+                text = text.split('\n').join('<br>');
                 document.getElementById("result").innerHTML = text;
                 button.className = button.className.replace('pure-button-disabled', 'pure-button-primary');
             };
