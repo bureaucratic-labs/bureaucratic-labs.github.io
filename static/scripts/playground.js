@@ -31,6 +31,9 @@
             if (request.readyState == 4 && request.status == 200) {
                 var matches = JSON.parse(request.responseText),
                     originals = [];
+                matches = matches.sort(function(a, b) {
+                    return b.match.length - a.match.length;
+                });
                 for (var i = matches.length - 1; i >= 0; i--) {
                     var grammar = matches[i].grammar,
                         tokens = matches[i].match;
