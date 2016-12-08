@@ -32,12 +32,12 @@
                 var matches = JSON.parse(request.responseText),
                     originals = [];
                 matches = matches.sort(function(a, b) {
-                    return b.match.length - a.match.length;
+                    return b.tokens.length - a.tokens.length;
                 });
                 for (var i = matches.length - 1; i >= 0; i--) {
                     var grammar = matches[i].grammar,
-                        tokens = matches[i].match;
-                    var position = [tokens[0][2][0], tokens[tokens.length - 1][2][1]];
+                        tokens = matches[i].tokens;
+                    var position = [tokens[0][1][0], tokens[tokens.length - 1][1][1]];
                     var original = text.substring(position[0], position[1]);
                     originals.push([grammar, original, position]);
                 };
