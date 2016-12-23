@@ -37,7 +37,7 @@
                 for (var i = matches.length - 1; i >= 0; i--) {
                     var grammar = matches[i].grammar,
                         tokens = matches[i].tokens;
-                    var position = [tokens[0][1][0], tokens[tokens.length - 1][1][1]];
+                    var position = [tokens[0].position[0], tokens[tokens.length - 1].position[1]];
                     var original = text.substring(position[0], position[1]);
                     originals.push([grammar, original, position]);
                 };
