@@ -1,62 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/main.css">
     <title>Bureaucratic Labs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&amp;subset=cyrillic" rel="stylesheet">
+    <link href="/static/styles/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <h1 class="brand">
-            <span class="red">{</span>
-            <span>ъ</span>
-            <span class="red">}</span>
-        </h1>
-        <nav>
-            <a href="/">Bureaucratic Labs</a>
-            <span>/</span>
-            <a href="https://github.com/bureaucratic-labs">GitHub</a>
-        </nav>
-    </div>
-    <div class="content">
-        <div class="project">
-            <div class="title">
-                <a href="/natasha/">
-                    <h2>Natasha</h2>
-                </a>
-            </div>
-            <div class="cover">
-                <img src="/static/images/natasha.png">
-            </div>
-            <div class="description">
-                <p>Наташа извлекает именованные сущности из текста на русском языке. Такие сущности представляют из себя, например &mdash; имена людей, названия организаций и фестивалей, объекты времени, навроде &laquo;на следующей неделе&raquo; или &laquo;в конце года&raquo; и многое другое</p>
-                <a href="https://github.com/bureaucratic-labs/natasha">
-                    <img src="https://img.shields.io/github/stars/bureaucratic-labs/natasha.svg?style=social&label=Star"/>
-                </a>
-            </div>
-        </div>
-        <div class="project">
-            <div class="title">
-                <a href="https://github.com/bureaucratic-labs/yargy">
-                    <h2>Yargy</h2>
-                </a>
-            </div>
-            <div class="cover">
-                <img src="/static/images/yargy.png">
-            </div>
-            <div class="description">
-                <p><a href="https://en.wikipedia.org/wiki/GLR_parser">GLR-парсер</a>, использующий морфологический разбор <a href="https://pymorphy2.readthedocs.io/en/latest/">pymorphy2</a> и словари <a href="http://opencorpora.org/">OpenCorpora.org</a> для извлечения фактов из текста на естественном языке</p>
-                <a href="https://github.com/bureaucratic-labs/yargy">
-                    <img src="https://img.shields.io/github/stars/bureaucratic-labs/yargy.svg?style=social&label=Star"/>
-                </a>
-            </div>
+
+<header>
+    <div class="brand">
+        <div class="brand-foreground">
+            <a href="/">B</a>
         </div>
     </div>
-    <div class="footer">
-        <p>Изображения предоставлены <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></p>
+    <nav>
+        <a href="/#tech">Технологии</a>
+        &#12316;
+        <a href="https://github.com/bureaucratic-labs" target="_blank">Github</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="intro">
+        <p>Независимое сообщество разработчиков</p>
     </div>
-    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter39680100 = new Ya.Metrika({ id:39680100, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/39680100" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</section>
+
+<section class="project-list" id="tech">
+
+    <h2>Технологии</h2>
+
+    <div class="project" id="natasha">
+        <div class="cover">
+            <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="natasha-cover-image" patternUnits="userSpaceOnUse" width="100" height="100">
+                  <image xlink:href="https://bureaucratic-labs.github.io/static/images/natasha.png" x="-25" width="150" height="100" />
+                </pattern>
+              </defs>
+              <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#natasha-cover-image)"/>
+            </svg>
+        </div>
+        <div class="content">
+            <header>
+                <a href="/natasha/">Natasha</a>
+            </header>
+            <p>Наташа извлекает именованные сущности из текста на русском языке. Такие сущности представляют из себя, например — имена людей, названия организаций и фестивалей, объекты времени, навроде «на следующей неделе» или «в конце года» и многое другое</p>
+        </div>
+    </div>
+
+    <div class="project" id="yargy">
+        <div class="cover">
+            <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="yargy-cover-image" patternUnits="userSpaceOnUse" width="100" height="100">
+                  <image xlink:href="https://bureaucratic-labs.github.io/static/images/yargy.png" x="-25" width="150" height="100" />
+                </pattern>
+              </defs>
+              <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#yargy-cover-image)"/>
+            </svg>
+        </div>
+        <div class="content">
+            <header>
+                <a href="https://github.com/bureaucratic-labs/yargy">Yargy</a>
+            </header>
+            <p><a href="https://en.wikipedia.org/wiki/GLR_parser">GLR-парсер</a>, использующий морфологический разбор <a href="https://pymorphy2.readthedocs.io/en/latest/">pymorphy2</a> и словари <a href="http://opencorpora.org/">OpenCorpora.org</a> для извлечения информации из текста на естественном языке</p>
+        </div>
+    </div>
+<!-- 
+    <div class="project" id="docsbox">
+        <div class="cover">
+            <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="docsbox-cover-image" patternUnits="userSpaceOnUse" width="100" height="100">
+                  <image xlink:href="/static/images/docsbox.png" x="-25" width="150" height="100" />
+                </pattern>
+              </defs>
+              <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#docsbox-cover-image)"/>
+            </svg>
+        </div>
+        <div class="content">
+            <header>
+                <a href="/#docsbox">Docsbox</a>
+            </header>
+            <p>Микросервис для конвертации офисных документов (Microsoft Office, LibreOffice и другие) в более удобные форматы: PDF, HTML, TXT, с возможностью создания PNG-превью</p>
+        </div>
+        
+    </div>
+-->
+</section>
+
+<!-- 
+<section class="platform-list">
+    <img src="/static/images/opencorpora.png" alt="OpenCorpora">
+    <img src="/static/images/python.png" alt="Python programming language">
+</section>
+ -->
+
+<footer>
+    <p>Изображения предоставлены <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></p>
+</footer>
+
 </body>
 </html>

@@ -1,134 +1,389 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    text-decoration: underline;
-}
-
-span.red {
-    color: #ff0000;
-}
-
-h1.brand {
     font-family: 'Ubuntu', sans-serif;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
-div.header {
-    height: 10vh;
+a.button-default {
+    display: inline-block;
+
+    color: #ffffff;
+    background-color: #dc0000;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    min-width: 128px;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+a.button-disabled {
+    display: inline-block;
+
+    color: #ffffff;
+    background-color: #eeeeee;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    min-width: 128px;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+body > header {
+    padding: 8px;
+    background-color: #dc0000;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding-left: 5vw;
-    padding-right: 5vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
-div.content {
-    min-height: 80vh;
+body > header > div.brand {
+    height: 64px;
+    width: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
-div.project {
-    width: 30vw;
+body > header > div.brand > div.brand-foreground {
+    color: #ffffff;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 48px;
+}
+
+body > header > div.brand > div.brand-foreground > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body > header {
+    color: #ffffff;
+}
+
+body > header > nav > a {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+body > header > nav > a:hover {
+    text-decoration: underline;
+}
+
+section.hero {
+    height: 480px;
+    background-image: url('/static/images/bureaucracy.png');
+    background-size: cover;
+}
+
+section.hero > div.intro {
+    height: 100%;
+
+    color: #ffffff;
+    font-size: 48px;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+section.project-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 32px;
+}
+
+section.project-list > h2 {
+    text-align: center;
+    font-size: 48px;
+}
+
+section.project-list > div.project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 768px;
+}
+
+section.project-list > div.project > div.cover {
+    width: 256px;
+    height: 256px;
+}
+
+section.project-list > div.project > div.content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+section.project-list > div.project > div.content > header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+section.project-list > div.project > div.content > header > a {
+    color: #000000;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+section.project-list > div.project > div.content > header > a:hover {
+    text-decoration: underline;
+}
+
+section.project-list > div.project:nth-child(odd) > div.cover {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+}
+
+section.project-list > div.project:nth-child(odd) > div.content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+}
+
+section.project-list > div.project:nth-child(even) > div.cover {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+}
+
+section.project-list > div.project:nth-child(even) > div.content {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+}
+
+section.project-list > div.project > div.content > p > a {
+    color: #000000;
+}
+
+section.platform-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+section.platform-list > img {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+
+section.natasha-playground {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+section.natasha-playground > h2 {
     text-align: center;
 }
 
-div.project > div.cover > img {
-    width: 20vw;
-    border-radius: 15vw;
+section.natasha-playground > div.content {
+    line-height: 2;
+    width: 768px;
+    min-height: 120px;
+    margin-bottom: 32px;
 }
 
-div.panel {
-    width: 45vw;
+section.natasha-playground > footer {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding-left: 1vw;
-    padding-right: 1vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
-div.panel > form {
+section.natasha-playground > footer > span#version {
+    color: #cccccc;
+}
+
+[data-entity] {
+    padding: 0.25em 0.35em;
+     margin: 0px 0.25em;
+     line-height: 1;
+     display: inline-block;
+     border-radius: 0.25em;
+     border: 1px solid;
+}
+
+[data-entity]::after {
+    box-sizing: border-box;
+    content: attr(data-entity);
+    font-size: 0.6em;
+    line-height: 1;
+    padding: 0.35em;
+    border-radius: 0.35em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 0px 0.1rem 0.5rem;
+}
+
+[data-entity][data-entity="person"] {
+    background: rgba(255,216,0, 0.2);
+    border-color: rgb(255,216,0);
+}
+
+[data-entity][data-entity="person"]::after {
+    background: rgb(255,216,0);
+}
+
+[data-entity][data-entity="organisation"] {
+    background: rgba(0, 154, 0, 0.2);
+    border-color: rgb(0, 154, 0);
+}
+
+[data-entity][data-entity="organisation"]::after {
+    background: rgb(0, 154, 0);
+}
+
+[data-entity][data-entity="location"] {
+    background: rgba(102, 0, 255, 0.2);
+    border-color: rgb(102, 0, 255);
+}
+
+[data-entity][data-entity="location"]::after {
+    background: rgb(102, 0, 255);
+}
+
+[data-entity][data-entity="event"] {
+    background: rgba(128, 0, 128, 0.2);
+    border-color: rgb(128, 0, 128);
+}
+
+[data-entity][data-entity="event"]::after {
+    background: rgb(128, 0, 128);
+}
+
+[data-entity][data-entity="date"] {
+    background: rgba(128, 128, 128, 0.2);
+    border-color: rgb(128, 128, 128);
+}
+
+[data-entity][data-entity="date"]::after {
+    background: rgb(128, 128, 128);
+}
+
+[data-entity][data-entity="money"] {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: rgb(255, 0, 0);
+}
+
+[data-entity][data-entity="money"]::after {
+    background: rgb(255, 0, 0);
+}
+
+[data-entity][data-entity="brand"] {
+    background: rgba(255, 192, 203, 0.2);
+    border-color: rgb(255, 192, 203);
+}
+
+[data-entity][data-entity="brand"]::after {
+    background: rgb(255, 192, 203);
+}
+
+body > footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    color: #cccccc;
 }
 
-div.panel > form > textarea#text {
-    width: 100%;
-    height: 100%;
+body > footer > p > a {
+    color: #000000;
+    text-decoration: none;
 }
 
-ul.legend {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    list-style-type: none;
-    flex-wrap: wrap;
-    padding: 0;
-}
-
-ul.legend > li {
-    display: flex;
-    align-items: center;
-    margin-right: 1vw;
-}
-
-ul.legend > li > span {
-    width: 16px;
-    height: 16px;
-    margin-right: 1vw;
-    border-radius: 8px;
-}
-
-span.person {
-    background-color: #FFD800;
-}
-
-span.org {
-    background-color: green;
-}
-
-span.event {
-    background-color: purple;
-}
-
-span.geo {
-    background-color: blue;
-}
-
-span.date {
-    background-color: gray;
-}
-
-span.money {
-    background-color: red;
-}
-
-span.brand {
-    background-color: pink;
-}
-
-div.footer {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body > footer > p > a:hover {
+    text-decoration: underline;
 }

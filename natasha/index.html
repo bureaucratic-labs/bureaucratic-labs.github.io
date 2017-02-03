@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/main.css">
-    <title>Bureaucratic Labs / Natasha</title>
+    <title>Natasha &mdash; Bureaucratic Labs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&amp;subset=cyrillic" rel="stylesheet">
+    <link href="/static/styles/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <h1 class="brand">
-            <span class="red">{</span>
-            <span>ъ</span>
-            <span class="red">}</span>
-        </h1>
-        <nav>
-            <a href="/">Bureaucratic Labs</a>
-            <span>/</span>
-            <a href="https://github.com/bureaucratic-labs">GitHub</a>
-        </nav>
-    </div>
-    <div class="content">
-        <div class="panel">
-            <form class="pure-form pure-form-stacked">
-                <textarea id="text">Так говорила в июле 1805 года известная Анна Павловна Шерер, фрейлина и приближенная императрицы Марии Феодоровны, встречая важного и чиновного князя Василия, первого приехавшего на ее вечер. Анна Павловна кашляла несколько дней, у нее был грипп, как она говорила (грипп был тогда новое слово, употреблявшееся только редкими).</textarea>
-                <button type="submit" class="pure-button pure-button-primary" id="start">Начать Анализ</button>
-            </form>
-        </div>
-        <div class="panel">
-            <p id="result">Так говорила в <span class="date">июле</span> <span class="date">1805 года</span> известная <span class="person"><span class="person"><span class="person"><span class="person"><span class="person">Анна</span></span> Павловна</span></span> <span class="person">Шерер</span></span>, фрейлина и приближенная императрицы <span class="person"><span class="person">Марии</span> Феодоровны</span>, встречая важного и чиновного князя <span class="person">Василия</span>, первого приехавшего на ее вечер. <span class="person"><span class="person"><span class="person"><span class="person">Анна</span></span> Павловна</span></span> кашляла несколько дней, у нее был грипп, как она говорила (грипп был тогда новое слово, употреблявшееся только редкими).</p>
-            <ul class="legend">
-                <li><span class="person"></span>Физ. лица</li>
-                <li><span class="org"></span>Организации</li>
-                <li><span class="event"></span>События</li>
-                <li><span class="geo"></span>Гео-объекты</li>
-                <li><span class="date"></span>Объекты времени</li>
-                <li><span class="money"></span>Денежные единицы</li>
-                <li><span class="brand"></span>Бренды</li>
-            </ul>
+
+<header>
+    <div class="brand">
+        <div class="brand-foreground">
+            <a href="/">B</a>
         </div>
     </div>
-    <div class="footer">
-        <p>Изображения предоставлены <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></p>
+    <nav>
+        <a href="/#tech">Технологии</a>
+        &#12316;
+        <a href="https://github.com/bureaucratic-labs" target="_blank">Github</a>
+    </nav>
+</header>
+
+<section class="natasha-playground" id="playground">
+
+    <h2>Демо</h2>
+
+    <div id="display" class="content" contenteditable="true" data-placeholder="None">
+    Так говорила в июле 1805 года известная Анна Павловна Шерер, фрейлина и приближенная императрицы Марии Феодоровны, встречая важного и чиновного князя Василия, первого приехавшего на ее вечер. Анна Павловна кашляла несколько дней, у нее был грипп, как она говорила (грипп был тогда новое слово, употреблявшееся только редкими).
     </div>
-    <script type="text/javascript" src="/static/scripts/playground.js"></script>
-    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter39680100 = new Ya.Metrika({ id:39680100, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/39680100" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+    <footer>
+        <span id="version">неизвестно</span>
+        <a class="button-default" href="#" id="start-analysis">Провести анализ</a>
+    </footer>
+</section>
+
+<footer>
+    <p>Изображения предоставлены <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></p>
+</footer>
+
+<script type="text/javascript" src="/static/scripts/playground.js"></script>
+
 </body>
 </html>
