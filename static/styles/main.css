@@ -359,6 +359,15 @@ section.natasha-playground > footer > span#version {
     background: rgb(255, 192, 203);
 }
 
+[data-entity][data-entity="address"] {
+    background: rgba(175, 218, 252, 0.2);
+    border-color: rgb(175, 218, 252);
+}
+
+[data-entity][data-entity="address"]::after {
+    background: rgb(175, 218, 252);
+}
+
 body > footer {
     display: -webkit-box;
     display: -ms-flexbox;
