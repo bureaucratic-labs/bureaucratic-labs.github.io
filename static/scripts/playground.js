@@ -58,7 +58,7 @@
                     if (replaced.indexOf(ents[i].text) === -1) {
                         replaced.push(ents[i].text);
                         console.log(ents[i].type);
-                        text = text.split(ents[i].text).join('<mark data-entity="' + ents[i].type.toLowerCase() + '">' + ents[i].text + '</mark>');
+                        text = text.split(ents[i].text).join('<mark data-entity="' + ents[i].type.toLowerCase().replace('probabilistic', '') + '">' + ents[i].text + '</mark>');
                     };
                 };
 
