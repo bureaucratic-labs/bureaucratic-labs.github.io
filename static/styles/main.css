@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Ubuntu|Ubuntu+Mono&subset=cyrillic');
+
 body {
     font-family: 'Ubuntu', sans-serif;
     -webkit-user-select: none;
@@ -40,6 +42,7 @@ a.button-disabled {
 
 body > header {
     padding: 8px;
+
     background-color: #dc0000;
 
     display: -webkit-box;
@@ -88,8 +91,8 @@ body > header > nav > a {
     color: #ffffff;
     font-size: 18px;
     text-decoration: none;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 body > header > nav > a:hover {
@@ -98,15 +101,17 @@ body > header > nav > a:hover {
 
 section.hero {
     height: 480px;
-    background-image: url('/static/images/bureaucracy.png');
+    /*
+    background-image: url('/static/images/bureaucracy.png'); 
     background-size: cover;
+    */
+    background-color: #dc0000;
 }
 
 section.hero > div.intro {
     height: 100%;
 
     color: #ffffff;
-    font-size: 48px;
 
     display: -webkit-box;
 
@@ -123,6 +128,20 @@ section.hero > div.intro {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+}
+
+section.hero > div.intro > div {
+    text-align: center;
+}
+
+section.hero > div.intro > div.header {
+    font-size: 36px;
+    margin-bottom: 32px;
+}
+
+section.hero > div.intro > div.description {
+    padding-left: 15vw;
+    padding-right: 15vw;
 }
 
 section.project-list {
@@ -175,6 +194,9 @@ section.project-list > div.project > div.content > header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 section.project-list > div.project > div.content > header > a {
@@ -234,10 +256,19 @@ section.platform-list > img {
 }
 
 section.contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     font-size: 32px;
     margin-bottom: 32px;
