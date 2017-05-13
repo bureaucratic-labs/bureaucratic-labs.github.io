@@ -11,8 +11,8 @@
         });
     };
 
-    var ExtractEndpoint = 'https://natasha-playground.herokuapp.com/api/extract',
-        VersionEndpoint = 'https://natasha-playground.herokuapp.com/api/version',
+    var ExtractEndpoint = 'https://natasha.b-labs.pro/api/extract',
+        VersionEndpoint = 'https://natasha.b-labs.pro/api/version',
         StartAnalysisButton = document.getElementById('start-analysis');
 
     var request = new XMLHttpRequest();
@@ -35,7 +35,7 @@
         button.className = button.className.replace('button-default', 'button-disabled');
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
-                var matches = JSON.parse(request.responseText),
+                var matches = JSON.parse(request.responseText).spans,
                     replaced = [],
                     ents = [];
 
