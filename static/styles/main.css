@@ -87,6 +87,12 @@ body > header {
     color: #ffffff;
 }
 
+body > header > nav {
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+
 body > header > nav > a {
     color: #ffffff;
     font-size: 18px;
@@ -413,6 +419,16 @@ section.natasha-playground > footer > span#version {
     background: rgb(175, 218, 252);
 }
 
+
+[data-entity][data-entity="street"] {
+    background: rgba(175, 218, 252, 0.2);
+    border-color: rgb(175, 218, 252);
+}
+
+[data-entity][data-entity="street"]::after {
+    background: rgb(175, 218, 252);
+}
+
 body > footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -440,4 +456,53 @@ body > footer > p > a {
 
 body > footer > p > a:hover {
     text-decoration: underline;
+}
+
+@media all and (max-width: 768px) {
+
+    section.hero {
+        height: 30vh;
+    }
+
+    section.hero > div.intro > div.header {
+        display: none;
+    }
+
+    section.hero > div.intro > div.description {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    section.project-list {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 5vh;
+    }
+
+    section.project-list > h2 {
+        display: none;
+    }
+
+    section.project-list > div.project {
+        width: 100%;
+    }
+
+    section.project-list > div.project > div.cover {
+        display: none;
+    }
+
+    section.project-list > div.project > div.content > header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.project-list > div.project > div.content > header > a {
+        text-decoration: underline;
+    }
+
+    section.contacts > h2 {
+        display: none;
+    }
+
 }
