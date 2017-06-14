@@ -303,13 +303,15 @@ section.natasha-playground > h2 {
 
 section.natasha-playground > div.content {
     line-height: 2;
-    width: 768px;
+    width: 80%;
+    max-width: 768px;
     min-height: 120px;
     margin-bottom: 32px;
 }
 
 section.natasha-playground > footer {
-    width: 768px;
+    width: 80%;
+    max-width: 768px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
