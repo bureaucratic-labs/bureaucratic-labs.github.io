@@ -29,42 +29,32 @@
     StartAnalysisButton.addEventListener('click', function(e) {
         e.preventDefault();
         var request = new XMLHttpRequest(),
-            container = document.getElementById('display')
+            container = document.getElementById('display'),
+            results = document.getElementById('results'),
             text = container.textContent.replace(/\n/g, ' '),
             button = this;
         button.className = button.className.replace('button-default', 'button-disabled');
+        results.innerHTML = '';
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
-                var matches = JSON.parse(request.responseText).spans,
-                    replaced = [],
-                    ents = [];
-
-                console.log(matches);
-
+                var matches = JSON.parse(request.responseText)
+                    resultHTML = text.substring(0);
+                matches.sort(function(a, b){
+                    if(a.span[1] - a.span[0] < b.span[1] - b.span[0]) return -1;
+                    if(a.span[1] - a.span[0] > b.span[1] - b.span[0]) return 1;
+                    return 0;
+                });
                 for (var i = matches.length - 1; i >= 0; i--) {
-                    var grammar = matches[i].grammar,
-                        tokens = matches[i].tokens;
-                    var position = [tokens[0].position[0], tokens[tokens.length - 1].position[1]];
-                    var original = text.substring(position[0], position[1]);
-                    ents.push({
-                        type: grammar,
-                        start: position[0],
-                        end: position[1],
-                        text: original,
-                    });
-                }
-
-                for (var i = ents.length - 1; i >= 0; i--) {
-                    if (replaced.indexOf(ents[i].text) === -1) {
-                        replaced.push(ents[i].text);
-                        console.log(ents[i].type);
-                        text = text.split(ents[i].text).join('<mark data-entity="' + ents[i].type.toLowerCase().replace('probabilistic', '') + '">' + ents[i].text + '</mark>');
-                    };
+                    var match = matches[i],
+                        start = match.span[0],
+                        finish = match.span[1],
+                        replacement = text.substring(start, finish),
+                        result = '<pre data-entity="name">' + replacement + '</pre>';
+                    resultHTML = resultHTML.replace(replacement, result);
                 };
-
-                container.innerHTML = text;
-                button.className = button.className.replace('button-disabled', 'button-default');
+                container.innerHTML = resultHTML;
             };
+            button.className = button.className.replace('button-disabled', 'button-default');
         };
         request.open('POST', ExtractEndpoint, true);
         request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
