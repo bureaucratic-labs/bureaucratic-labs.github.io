@@ -30,11 +30,9 @@
         e.preventDefault();
         var request = new XMLHttpRequest(),
             container = document.getElementById('display'),
-            results = document.getElementById('results'),
             text = container.textContent.replace(/\n/g, ' '),
             button = this;
         button.className = button.className.replace('button-default', 'button-disabled');
-        results.innerHTML = '';
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
                 var matches = JSON.parse(request.responseText)
