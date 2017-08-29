@@ -26,36 +26,41 @@
     request.open('GET', VersionEndpoint, true);
     request.send();
 
+    var displacy = new displaCyENT(ExtractEndpoint, {
+        container: '#display',
+        defaultEnts: ['name'],
+    });
+
     StartAnalysisButton.addEventListener('click', function(e) {
         e.preventDefault();
         var request = new XMLHttpRequest(),
             container = document.getElementById('display'),
-            text = container.textContent.replace(/\n/g, ' '),
+            rawText = container.textContent.replace(/\n/g, ' '),
             button = this;
         button.className = button.className.replace('button-default', 'button-disabled');
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
                 var matches = JSON.parse(request.responseText)
-                    resultHTML = text.substring(0);
+                    spans = [];
                 matches.sort(function(a, b){
-                    if(a.span[1] - a.span[0] < b.span[1] - b.span[0]) return -1;
-                    if(a.span[1] - a.span[0] > b.span[1] - b.span[0]) return 1;
+                    if(a.span[0] > b.span[0]) return -1;
+                    if(a.span[1] < b.span[1]) return 1;
                     return 0;
                 });
                 for (var i = matches.length - 1; i >= 0; i--) {
-                    var match = matches[i],
-                        start = match.span[0],
-                        finish = match.span[1],
-                        replacement = text.substring(start, finish),
-                        result = '<pre data-entity="name">' + replacement + '</pre>';
-                    resultHTML = resultHTML.replace(replacement, result);
+                    var match = matches[i];
+                    spans.push({
+                        start: match.span[0],
+                        end: match.span[1],
+                        type: match.type
+                    });
                 };
-                container.innerHTML = resultHTML;
+                displacy.render(rawText, spans, ['name']);
             };
             button.className = button.className.replace('button-disabled', 'button-default');
         };
         request.open('POST', ExtractEndpoint, true);
         request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        request.send('text=' + encodeURIComponent(text));
+        request.send('text=' + encodeURIComponent(rawText));
     });
 })();
