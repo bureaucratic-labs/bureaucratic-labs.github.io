@@ -358,6 +358,15 @@ section.natasha-playground > footer > span#version {
     background: rgb(255,216,0);
 }
 
+[data-entity][data-entity="name"] {
+    background: rgba(255,216,0, 0.2);
+    border-color: rgb(255,216,0);
+}
+
+[data-entity][data-entity="name"]::after {
+    background: rgb(255,216,0);
+}
+
 [data-entity][data-entity="organisation"] {
     background: rgba(0, 154, 0, 0.2);
     border-color: rgb(0, 154, 0);
