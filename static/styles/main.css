@@ -327,6 +327,29 @@ section.natasha-playground > footer > span#version {
     color: #cccccc;
 }
 
+section.natasha-playground > footer > a.button-secondary {
+    color: #ccc;
+    text-decoration: none;
+}
+
+div#issue-report-form {
+    display: none;
+    width: 80%;
+    max-width: 768px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-direction: column;
+}
+
+textarea#issue-description {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+a#send-issue-button {
+    align-self: flex-end;
+}
+
 [data-entity] {
     padding: 0.25em 0.35em;
      margin: 0px 0.25em;

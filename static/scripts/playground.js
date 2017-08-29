@@ -13,7 +13,10 @@
 
     var ExtractEndpoint = 'https://natasha.b-labs.pro/api/extract',
         VersionEndpoint = 'https://natasha.b-labs.pro/api/version',
-        StartAnalysisButton = document.getElementById('start-analysis');
+        IssueEndpoint = 'https://natasha.b-labs.pro/api/issues',
+        StartAnalysisButton = document.getElementById('start-analysis'),
+        ShowReportFormButton = document.getElementById('show-report-form-button'),
+        SendIssueButton = document.getElementById('send-issue-button');
 
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
@@ -29,6 +32,12 @@
     var displacy = new displaCyENT(ExtractEndpoint, {
         container: '#display',
         defaultEnts: ['name'],
+    });
+
+    ShowReportFormButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        var form = document.getElementById('issue-report-form');
+        form.style.display = form.style.display == "none" ? "flex" : "none";
     });
 
     StartAnalysisButton.addEventListener('click', function(e) {
@@ -62,5 +71,24 @@
         request.open('POST', ExtractEndpoint, true);
         request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         request.send('text=' + encodeURIComponent(rawText));
+    });
+
+    SendIssueButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        var request = new XMLHttpRequest(),
+            rawText = document.getElementById('display').textContent,
+            descriptionContainer = document.getElementById('issue-description'),
+            rawDescription = descriptionContainer.value;
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                descriptionContainer.value = '';
+                var form = document.getElementById('issue-report-form');
+                form.style.display = form.style.display == "none" ? "flex" : "none";
+            };
+            console.log(request);
+        };
+        request.open('POST', IssueEndpoint);
+        request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        request.send('text=' + encodeURIComponent(rawText) + '&description=' + encodeURIComponent(rawDescription));
     });
 })();
