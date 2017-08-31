@@ -23,7 +23,7 @@
         if (request.readyState == 4 && request.status == 200) {
             var element = document.getElementById('version');
                 versions = JSON.parse(request.responseText);
-            element.innerHTML = versions.yargy + ' / ' + versions.natasha;
+            element.innerHTML = versions.yargy + ' / ' + versions.natasha + ' / ' + versions.pymorphy + ' / ' + versions.pymorphy_dicts ;
         };
     };
     request.open('GET', VersionEndpoint, true);
