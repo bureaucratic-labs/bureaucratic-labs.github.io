@@ -31,7 +31,7 @@
 
     var displacy = new displaCyENT(ExtractEndpoint, {
         container: '#display',
-        defaultEnts: ['name'],
+        defaultEnts: ['name', 'address', 'location'],
     });
 
     ShowReportFormButton.addEventListener('click', function(e) {
@@ -64,7 +64,7 @@
                         type: match.type
                     });
                 };
-                displacy.render(rawText, spans, ['name']);
+                displacy.render(rawText, spans, ['name', 'address', 'location']);
             };
             button.className = button.className.replace('button-disabled', 'button-default');
         };
