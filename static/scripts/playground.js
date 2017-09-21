@@ -47,6 +47,7 @@
             rawText = container.textContent.replace(/\n/g, ' '),
             button = this;
         button.className = button.className.replace('button-default', 'button-disabled');
+        button.innerHTML = '...';
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
                 var matches = JSON.parse(request.responseText)
@@ -65,8 +66,9 @@
                     });
                 };
                 displacy.render(rawText, spans, ['name', 'address', 'location']);
+                button.className = button.className.replace('button-disabled', 'button-default');
+                button.innerHTML = 'Провести анализ';
             };
-            button.className = button.className.replace('button-disabled', 'button-default');
         };
         request.open('POST', ExtractEndpoint, true);
         request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
