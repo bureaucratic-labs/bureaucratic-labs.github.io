@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" height="256">
+<defs><filter id="f1" x="0" y="0"><feGaussianBlur in="SourceGraphic" stdDeviation="2" /></filter></defs>
+<rect x="0" y="0" width="256" height="256" fill="#545c4c" />
+<g transform="scale(8.000000) translate(0.5 0.5)" filter="url(#f1)">
+<g transform="translate(19 12) rotate(320) scale(9 25)"><rect fill="#100400" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<g transform="translate(0.009716 17.114241) rotate(15.043514) scale(5.562119 25.273836)"><ellipse fill="#7abfab" fill-opacity="0.501961" cx="0" cy="0" rx="1" ry="1" /></g>
+<g transform="translate(31 5) rotate(42) scale(28 10)"><rect fill="#78bca7" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<g transform="translate(19 26) rotate(14) scale(24 19)"><rect fill="#714d34" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<polygon fill="#121713" fill-opacity="0.501961" points="16,3 4,17 28,9" />
+<rect fill="#000000" fill-opacity="0.501961" x="12" y="26" width="3" height="6" />
+<g transform="translate(10 25) rotate(124) scale(19 1)"><rect fill="#b47753" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<g transform="translate(0 26) rotate(58) scale(5 24)"><rect fill="#5d8b78" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<polygon fill="#6d9a89" fill-opacity="0.501961" points="4.080291,47.000000,0.840429,4.373207,36.080394,-5.296174,-7.267297,1.056115" />
+<polygon fill="#3a362a" fill-opacity="0.501961" points="13.758244,23.075017,13.718811,47.000000,9.696992,21.695933,42.478413,19.472636" />
+<polygon fill="#608875" fill-opacity="0.501961" points="30.876803,6.661289,22.811534,8.195520,15.395949,-8.506980,44.890470,37.892448" />
+<ellipse fill="#565d4a" fill-opacity="0.501961" cx="13" cy="9" rx="3" ry="3" />
+<polygon fill="#867655" fill-opacity="0.501961" points="-2.616037,47.000000,42.217312,12.798202,9.929422,47.000000,6.412510,25.884277" />
+<polygon fill="#ac6a4a" fill-opacity="0.501961" points="13,20 19,19 16,14" />
+<polygon fill="#11100e" fill-opacity="0.501961" points="20,8 18,14 28,7" />
+<g transform="translate(31 19) rotate(236) scale(1 20)"><rect fill="#111c16" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<g transform="translate(19 29) rotate(215) scale(2 31)"><rect fill="#726649" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<polygon fill="#1e211b" fill-opacity="0.501961" points="21.034918,23.326890,12.903192,-16.000000,10.484887,-12.209880,25.362581,13.949737" />
+<g transform="translate(4 31) rotate(52) scale(1 14)"><rect fill="#b89673" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<polygon fill="#65927e" fill-opacity="0.501961" points="29,12 28,-16 46,36" />
+<rect fill="#000608" fill-opacity="0.501961" x="12" y="27" width="5" height="2" />
+<ellipse fill="#181812" fill-opacity="0.501961" cx="15" cy="21" rx="2" ry="2" />
+<g transform="translate(12 4) rotate(238) scale(4 5)"><rect fill="#0b100f" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<ellipse fill="#c28b62" fill-opacity="0.501961" cx="15" cy="24" rx="2" ry="2" />
+<polygon fill="#141210" fill-opacity="0.501961" points="5,16 8,12 18,12" />
+<polygon fill="#6b9280" fill-opacity="0.501961" points="6,14 -15,12 10,-4" />
+<polygon fill="#678a78" fill-opacity="0.501961" points="3.119976,0.480838,47.000000,1.756520,22.678241,8.307989,16.184739,-7.321613" />
+<polygon fill="#6b7c74" fill-opacity="0.501961" points="33,25 33,47 16,47" />
+<g transform="translate(11 20) rotate(283) scale(2 3)"><rect fill="#dd624c" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<g transform="translate(17 19) rotate(145) scale(1 6)"><rect fill="#c87f58" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<g transform="translate(28 30) rotate(310) scale(14 1)"><rect fill="#1d281d" fill-opacity="0.501961" x="-0.5" y="-0.5" width="1" height="1" /></g>
+<polygon fill="#161814" fill-opacity="0.501961" points="17,1 12,4 28,10" />
+</g>
+</svg>
