@@ -12,7 +12,7 @@ a.button-default {
     display: inline-block;
 
     color: #ffffff;
-    background-color: #bb0000;
+    background-color: #aa0000;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 32px;
@@ -43,7 +43,7 @@ a.button-disabled {
 body > header {
     padding: 8px;
 
-    background-color: #bb0000;
+    background-color: #aa0000;
 
     display: -webkit-box;
 
@@ -111,7 +111,7 @@ section.hero {
     background-image: url('/static/images/bureaucracy.png'); 
     background-size: cover;
     */
-    background-color: #bb0000;
+    background-color: #aa0000;
 }
 
 section.hero > div.intro {
